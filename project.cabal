@@ -1,0 +1,46 @@
+cabal-version: 2.0
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cfc6d42c32d097b64fb3d4438e8c9bb6d861474e81447c6e5fec90b832892a49
+
+name:           project
+version:        0.0.1
+build-type:     Simple
+
+library
+  exposed-modules:
+      ExposedModule
+  other-modules:
+      OtherModule
+  hs-source-dirs:
+      lib
+  build-depends:
+      base
+  default-language: Haskell2010
+
+library internal
+  exposed-modules:
+      Internal
+  other-modules:
+      Paths_project
+  hs-source-dirs:
+      internal
+  build-depends:
+      base
+    , project
+  default-language: Haskell2010
+
+executable project
+  main-is: Main.hs
+  other-modules:
+      Paths_project
+  hs-source-dirs:
+      exec
+  build-depends:
+      base
+    , internal
+    , project
+  default-language: Haskell2010
