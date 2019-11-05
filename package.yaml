@@ -13,6 +13,7 @@ internal-libraries:
     source-dirs: internal
     dependencies:
       - project
+      - time
     exposed-modules:
       - Internal
 
